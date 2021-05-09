@@ -1,5 +1,6 @@
 # Sample App
 
+[Click here for live demo](https://suleyman-sample-app.netlify.app)
 
 ### Framework & Libraries
 
