@@ -30,7 +30,9 @@
       <a-form-item :label="t('formFields.message')" name="message">
         <a-textarea v-model:value="formState.message" :auto-size="{ minRows: 5, maxRows: 10 }" />
       </a-form-item>
-      <a-button type="primary" @click="onClickSubmit" :loading="loading">{{ t("formFields.send") }}</a-button>
+      <a-button type="primary" @click="onClickSubmit" :loading="loading">
+        {{ t("formFields.send") }}
+      </a-button>
     </a-form>
   </div>
 </template>

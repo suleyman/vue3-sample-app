@@ -1,21 +1,27 @@
 <template>
   <div>
-    <a-button type="primary" @click="visible = true"> Login </a-button>
-    <a-modal :destroyOnClose="true" v-model:visible="visible" title="Login" @ok="onClickSubmit">
+    <a-button type="primary" @click="visible = true">
+      {{ t("Login") }}
+    </a-button>
+    <a-modal :destroyOnClose="true" v-model:visible="visible" :title="t('Login')" @ok="onClickSubmit">
       <a-form ref="formRef" :model="formState" :rules="rules" :label-col="labelCol" :wrapper-col="wrapperCol" layout="vertical">
-        <a-form-item ref="name" label="Name" name="name">
+        <a-form-item ref="name" :label="t('formFields.name')" name="name">
           <a-input v-model:value="formState.name" />
         </a-form-item>
-        <a-form-item ref="name" label="Email" name="email">
+        <a-form-item ref="name" :label="t('formFields.email')" name="email">
           <a-input v-model:value="formState.email" />
         </a-form-item>
-        <a-form-item ref="name" label="Password" name="password">
+        <a-form-item ref="name" :label="t('formFields.password')" name="password">
           <a-input-password v-model:value="formState.password" />
         </a-form-item>
       </a-form>
       <template #footer>
-        <a-button key="back" @click="visible = false">Close</a-button>
-        <a-button type="primary" :loading="loading" @click="onClickSubmit"> Submit </a-button>
+        <a-button key="back" @click="visible = false">
+          {{ t("Close") }}
+        </a-button>
+        <a-button type="primary" :loading="loading" @click="onClickSubmit">
+          {{ t("Login") }}
+        </a-button>
       </template>
     </a-modal>
   </div>

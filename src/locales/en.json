@@ -2,7 +2,9 @@
   "Sample": "Sample",
   "Home": "Home",
   "Contact": "Contact",
-  "hello": "Hello",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Close": "Close",
   "home-text": "Sample English text for homepage",
   "formFields": {
     "title": "Title",

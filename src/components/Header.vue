@@ -28,7 +28,7 @@
                 </a-menu-item>
                 <a-menu-item key="2" @click="logout">
                   <CloseOutlined />
-                  Logout
+                  {{ t("Logout") }}
                 </a-menu-item>
               </a-menu>
             </template>

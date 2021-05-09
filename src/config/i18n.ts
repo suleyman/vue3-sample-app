@@ -10,11 +10,9 @@ const messages = {
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: "tr", // set locale
-  fallbackLocale: "tr", // set fallback locale
-  messages, // set locale messages
-  // If you need to specify other options, you can set other options
-  // ...
+  locale: "tr",
+  fallbackLocale: "tr",
+  messages,
 });
 
 export default i18n;
