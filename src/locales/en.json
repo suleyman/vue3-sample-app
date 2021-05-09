@@ -1,0 +1,34 @@
+{
+  "Sample": "Sample",
+  "Home": "Home",
+  "Contact": "Contact",
+  "hello": "Hello",
+  "home-text": "Sample English text for homepage",
+  "formFields": {
+    "title": "Title",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "country": "Country",
+    "message": "Message",
+    "send": "Send"
+  },
+  "formValidationErrors": {
+    "requireTitle": "Please input title",
+    "requireName": "Please input name",
+    "requireEmail": "Please input email address",
+    "requirePassword": "Please input password",
+    "requirePhone": "Please input phone"
+  },
+  "countryNames": {
+    "TR": "Turkey",
+    "US": "United States of America",
+    "GB": "United Kingdom",
+    "DE": "Germany",
+    "SE": "Sweden",
+    "KE": "Kenya",
+    "BR": "Brazil",
+    "ZW": "Zimbabwe"
+  }
+}

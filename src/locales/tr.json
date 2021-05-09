@@ -1,0 +1,34 @@
+{
+  "Sample": "Örnek",
+  "Home": "Anasayfa",
+  "Contact": "İletişim",
+  "hello": "Merhaba",
+  "home-text": "Anasayfa için örnek Türkçe metin",
+  "formFields": {
+    "title": "Başlık",
+    "name": "İsim",
+    "email": "Eposta",
+    "phone": "Telefon",
+    "password": "Parola",
+    "country": "Ülke",
+    "message": "Mesaj",
+    "send": "Gönder"
+  },
+  "formValidationErrors": {
+    "requireTitle": "Lütfen başlık giriniz",
+    "requireName": "Lütfen adınızı giriniz",
+    "requireEmail": "Lütfen eposta adresi giriniz",
+    "requirePassword": "Lütfen parola giriniz",
+    "requirePhone": "Lütfen telefon numarası giriniz"
+  },
+  "countryNames": {
+    "TR": "Türkiye",
+    "US": "Amerika Birleşik Devletleri",
+    "GB": "Birleşik Krallık",
+    "DE": "Almanya",
+    "SE": "İsveç",
+    "KE": "Kenya",
+    "BR": "Brezilya",
+    "ZW": "Zimbabve"
+  }
+}
