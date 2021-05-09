@@ -1,7 +1,7 @@
 <template>
   <div class="page home-page">
     <h1>{{ t("Contact") }}</h1>
-    <a-form ref="formRef" :model="formState" :label-col="labelCol" :wrapper-col="wrapperCol" layout="vertical">
+    <a-form ref="formRef" :model="formState" :rules="rules" :label-col="labelCol" :wrapper-col="wrapperCol" layout="vertical">
       <a-form-item :label="t('formFields.title')" name="title">
         <a-input v-model:value="formState.title" />
       </a-form-item>
@@ -59,6 +59,22 @@ export default defineComponent({
       countryCode: "",
       message: "",
     });
+    const rules = {
+      email: [
+        {
+          required: true,
+          type: "email",
+          message: t("formValidationErrors.requireEmail"),
+        },
+      ],
+      phone: [
+        {
+          required: true,
+          pattern: "^(\\d{10}|\\d{12})$",
+          message: t("formValidationErrors.requirePhone"),
+        },
+      ],
+    };
     const countryList = ["TR", "US", "GB", "DE", "SE", "KE", "BR", "ZW"];
 
     const watchLoginStatus = watch(
@@ -95,6 +111,7 @@ export default defineComponent({
     return {
       t,
       formRef,
+      rules,
       labelCol: { span: 12 },
       wrapperCol: { span: 12 },
       formState,

@@ -54,6 +54,19 @@ export default defineComponent({
           message: t("formValidationErrors.requireName"),
         },
       ],
+      email: [
+        {
+          required: true,
+          type: "email",
+          message: t("formValidationErrors.requireEmail"),
+        },
+      ],
+      password: [
+        {
+          required: true,
+          message: t("formValidationErrors.requirePassword"),
+        },
+      ],
     };
 
     const onClickSubmit = () => {
