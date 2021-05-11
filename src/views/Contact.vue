@@ -1,39 +1,43 @@
 <template>
   <div class="page home-page">
     <h1>{{ t("Contact") }}</h1>
-    <a-form ref="formRef" :model="formState" :rules="rules" :label-col="labelCol" :wrapper-col="wrapperCol" layout="vertical">
-      <a-form-item :label="t('formFields.title')" name="title">
-        <a-input v-model:value="formState.title" />
-      </a-form-item>
-      <a-form-item :label="t('formFields.name')" name="name">
-        <a-input v-model:value="formState.name" />
-      </a-form-item>
-      <a-form-item :label="t('formFields.email')" name="email">
-        <a-input v-model:value="formState.email" />
-      </a-form-item>
-      <a-form-item :label="t('formFields.phone')" name="phone">
-        <a-input v-model:value="formState.phone" />
-      </a-form-item>
-      <a-form-item :label="t('formFields.country')" name="country">
-        <a-select
-          v-model:value="formState.countryCode"
-          show-search
-          placeholder="Select your country"
-          option-filter-prop="children"
-          :filter-option="filterOption"
-        >
-          <a-select-option :value="country" v-for="country in countryList" :key="country">
-            {{ t(`countryNames.${country}`) }}
-          </a-select-option>
-        </a-select>
-      </a-form-item>
-      <a-form-item :label="t('formFields.message')" name="message">
-        <a-textarea v-model:value="formState.message" :auto-size="{ minRows: 5, maxRows: 10 }" />
-      </a-form-item>
-      <a-button type="primary" @click="onClickSubmit" :loading="loading">
-        {{ t("formFields.send") }}
-      </a-button>
-    </a-form>
+    <a-row>
+      <a-col :xs="{ span: 24 }" :lg="{ span: 12 }">
+        <a-form ref="formRef" :model="formState" :rules="rules" :label-col="labelCol" :wrapper-col="wrapperCol" layout="vertical">
+          <a-form-item :label="t('formFields.title')" name="title">
+            <a-input v-model:value="formState.title" />
+          </a-form-item>
+          <a-form-item :label="t('formFields.name')" name="name">
+            <a-input v-model:value="formState.name" />
+          </a-form-item>
+          <a-form-item :label="t('formFields.email')" name="email">
+            <a-input v-model:value="formState.email" />
+          </a-form-item>
+          <a-form-item :label="t('formFields.phone')" name="phone">
+            <a-input v-model:value="formState.phone" />
+          </a-form-item>
+          <a-form-item :label="t('formFields.country')" name="country">
+            <a-select
+              v-model:value="formState.countryCode"
+              show-search
+              placeholder="Select your country"
+              option-filter-prop="children"
+              :filter-option="filterOption"
+            >
+              <a-select-option :value="country" v-for="country in countryList" :key="country">
+                {{ t(`countryNames.${country}`) }}
+              </a-select-option>
+            </a-select>
+          </a-form-item>
+          <a-form-item :label="t('formFields.message')" name="message">
+            <a-textarea v-model:value="formState.message" :auto-size="{ minRows: 5, maxRows: 10 }" />
+          </a-form-item>
+          <a-button type="primary" @click="onClickSubmit" :loading="loading">
+            {{ t("formFields.send") }}
+          </a-button>
+        </a-form>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
@@ -112,8 +116,8 @@ export default defineComponent({
       t,
       formRef,
       rules,
-      labelCol: { span: 12 },
-      wrapperCol: { span: 12 },
+      labelCol: { span: 24 },
+      wrapperCol: { span: 24 },
       formState,
       loading,
       countryList,

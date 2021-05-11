@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import Contact from "@/views/Contact.vue";
+import { store } from "@/store";
 
 const routes = [
   {
@@ -18,6 +19,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from) => {
+  store.dispatch("hideMobileMenu");
 });
 
 export default router;
